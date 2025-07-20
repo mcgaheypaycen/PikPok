@@ -1,0 +1,134 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Build outputs
+dist/
+dist-new/
+build/
+out/
+*.exe
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+
+# Electron build artifacts
+app.asar
+app.asar.unpacked/
+*.asar
+
+# Development files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Debug files
+debug.log
+*.debug
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Electron-builder cache
+.electron-builder-cache/
+
+# User data (likes, last folder, etc.)
+# Note: These are created at runtime and shouldn't be in version control
+likes.json
+last-folder.txt
+
+# Icon files (if user wants to keep their own)
+# Uncomment if you want to ignore custom icons
+# assets/icon.ico
+# assets/icon.icns
+# assets/icon.png
+
+# Documentation files (optional - uncomment if you want to ignore)
+# notes.txt
+# IMPLEMENTATION_PLAN_V2.md
+# PRD.md 

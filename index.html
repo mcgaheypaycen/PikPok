@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PikPok</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header with folder selection -->
+        <div id="header">
+            <div id="folder-info">
+                <button id="folder-select-btn" class="folder-btn">
+                    <span id="folder-name">📁 No folder selected</span>
+                    <span id="video-count">(0 videos)</span>
+                </button>
+            </div>
+            
+            <div id="auto-play-toggle">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="auto-play-checkbox" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Auto-play</span>
+            </div>
+            
+            <div id="header-nav">
+                <button id="nav-up" class="nav-btn compact" title="Previous Video (↑)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+                    </svg>
+                </button>
+                <button id="view-liked-btn" class="nav-btn compact" title="Liked Videos (Long press to clear all likes)" style="display: none;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </button>
+                <button id="nav-down" class="nav-btn compact" title="Next Video (↓)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main video container -->
+        <div id="video-container">
+            <div id="video-feed">
+                <!-- Videos will be dynamically added here -->
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Like animation container -->
+        <div id="like-animations"></div>
+
+        <!-- Loading indicator -->
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <span>Loading videos...</span>
+        </div>
+
+        <!-- Empty state -->
+        <div id="empty-state" class="hidden">
+            <div class="empty-icon">📁</div>
+            <h3>No videos found</h3>
+            <p>Select a folder containing MP4 files to get started</p>
+            <button id="empty-open-folder" class="btn-primary">Open Folder</button>
+        </div>
+    </div>
+    
+    <!-- Liked Videos Page -->
+    <div id="liked-videos-page" class="page hidden">
+        <div id="liked-header" class="page-header">
+            <button id="back-to-main" class="btn-secondary">← Back to Videos</button>
+            <div id="liked-info">
+                <span id="liked-title">Liked Videos</span>
+                <span id="liked-count">0 videos</span>
+            </div>
+        </div>
+        
+        <div id="liked-video-container">
+            <div id="liked-video-feed"></div>
+        </div>
+        
+        <div id="liked-navigation">
+            <button id="liked-nav-up" class="nav-btn" title="Previous Video (↑)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+                </svg>
+            </button>
+            <button id="liked-nav-down" class="nav-btn" title="Next Video (↓)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html> 
